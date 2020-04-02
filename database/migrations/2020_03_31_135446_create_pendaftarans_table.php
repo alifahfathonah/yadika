@@ -28,8 +28,10 @@ class CreatePendaftaransTable extends Migration
             $table->string('pekerjaan_ibu');
             $table->string('no_hp');
             $table->string('no_ho_ortu');
+            $table->string('email_murid');
             $table->string('jurusan');
             $table->string('info');
+            $table->string('status')->default('Belum');
             $table->timestamps();
         });
     }

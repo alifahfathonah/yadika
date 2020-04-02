@@ -9,17 +9,17 @@
 	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
 	<meta content="" name="description" />
 	<meta content="" name="author" />
-	
+	<link rel="icon" href="{{asset('frontend/img/icon/yadika.png')}}">
 	<!-- ================== BEGIN BASE CSS STYLE ================== -->
 	<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
 	<link href="{{asset('frontend/plugins/bootstrap3/css/bootstrap.min.css')}}" rel="stylesheet" />
 	<link href="{{asset('frontend/plugins/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet" />
 	<link href="{{asset('frontend/plugins/animate/animate.min.css')}}" rel="stylesheet" />
-	<link href="{{asset('frontend/css/forum/style.min.css')}}" rel="stylesheet" />
+	<link href="{{asset('frontend/css/forum/style.css')}}" rel="stylesheet" />
 	<link href="{{asset('frontend/css/forum/style-responsive.min.css')}}" rel="stylesheet" />
 	<link href="{{asset('frontend/css/forum/theme/default.css')}}" id="theme" rel="stylesheet" />
 	<!-- ================== END BASE CSS STYLE ================== -->
-	
+	<link href="{{asset('backend/css/icons.min.css')}}" rel="stylesheet" type="text/css" />
 	<!-- ================== BEGIN BASE JS ================== -->
 	<script src="{{asset('frontend/plugins/pace/pace.min.js')}}"></script>
 	<!-- ================== END BASE JS ================== -->
@@ -37,23 +37,49 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a href="/" class="navbar-brand">
-                    <span class="navbar-logo"></span>
-                    {{-- <span class="brand-text">
-                        SMK YADIKA NATAR
-                    </span> --}}
+                    <img src="{{asset('frontend/img/icon/yadika.png')}}">
                 </a>
             </div>
             <!-- end navbar-header -->
             <!-- begin #header-navbar -->
             <div class="collapse navbar-collapse" id="header-navbar">
                 <ul class="nav navbar-nav navbar-left">
-                    <li>
-                        <a href="{{url('pendaftaran-online')}}">Pendaftaran</a>
+                    <li><a href="/"><b>Home</b></a></li>
+                    <li class="dropdown">
+                        <a href="javascript:;" data-toggle="dropdown"><b>Tentang Kami</b> <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="">Sejarah Yadika</a></li>
+                            <li><a href="">Sejarah SMK</a></li>
+                            <li><a href="">Profile</a></li>
+                            <li><a href="">Kepala Sekolah</a></li>
+                            <li><a href="">Visi dan Misi</a></li>
+                            <li><a href="">Tujuan</a></li>
+                            <li><a href="">Yayasan</a></li>
+                            <li><a href="">Guru dan Staf</a></li>
+                            <li><a href="">Prestasi</a></li>
+                            <li><a href="">Organisasi</a></li>
+                            <li><a href="">Ekstrakurikuler</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="javascript:;" data-toggle="dropdown"><b>Program Keahlian</b> <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="">Teknik Komputer & Jaringan</a></li>
+                            <li><a href="">Otomotif</a></li>
+                            <li><a href="">Administrasi Perkantoran</a></li>
+                            <li><a href="">Akuntansi</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="javascript:;" data-toggle="dropdown"><b>Informasi</b> <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{{url('pendaftaran-online')}}">Pendaftaran Online</a></li>
+                        </ul>
                     </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="{{route('register')}}">Daftar Akun</a></li>
-                    <li><a href="{{route('login')}}">Masuk</a></li>
+                    {{-- <li><a href="{{route('register')}}">Daftar Akun</a></li> --}}
+                    <li><a href="{{route('login')}}"><b>Masuk</b></a></li>
                 </ul>
             </div>
             <!-- end #header-navbar -->
@@ -66,7 +92,7 @@
     <div class="search-banner has-bg">
         <!-- begin bg-cover -->
         <div class="bg-cover">
-            <img src="../assets/img/cover/cover-1.jpg" alt="" />
+            <img src="{{asset('frontend/img/cover/cover-1.jpg')}}"/>
         </div>
         <!-- end bg-cover -->
         <!-- begin container -->
@@ -91,78 +117,14 @@
     <!-- begin #footer -->
     <div id="footer" class="footer">
         <!-- begin container -->
-        <div class="container">
-            <!-- begin row -->
-            <div class="row">
-                <!-- begin col-4 -->
-                <div class="col-md-4">
-                    <!-- begin section-container -->
-                    <div class="section-container">
-                        <h4>About Color Admin</h4>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices ipsum in elementum porttitor. 
-                            Cras porttitor fermentum nisl non elementum. Nulla in placerat libero. Nulla pharetra purus eget diam dictum 
-                            ullamcorper nec et eros. Suspendisse consectetur nulla ut volutpat aliquam.
-                        </p>
-                    </div>
-                    <!-- end section-container -->
-                </div>
-                <!-- end col-4 -->
-                <!-- begin col-4 -->
-                <div class="col-md-4">
-                    <!-- begin section-container -->
-                    <div class="section-container">
-                        <h4>Latest Post</h4>
-                        <ul class="latest-post">
-                            <li>
-                                <h4 class="title"><a href="#">Consectetur adipiscing elit ultrices</a></h4>
-                                <p class="time">yesterday 10:42am</p>
-                            </li>
-                            <li>
-                                <h4 class="title"><a href="#">Fusce ultrices ipsum porttitor</a></h4>
-                                <p class="time">10/04/2015</p>
-                            </li>
-                            <li>
-                                <h4 class="title"><a href="#">Cras porttitor fermentum adipiscing</a></h4>
-                                <p class="time">02/04/2015</p>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- end section-container -->
-                </div>
-                <!-- end col-4 -->
-                <!-- begin col-4 -->
-                <div class="col-md-4">
-                    <!-- begin section-container -->
-                    <div class="section-container">
-                        <h4>New Users</h4>
-                        <ul class="new-user">
-                            <li><a href="#"><img src="../assets/img/user/user-1.jpg" alt="" /></a></li>
-                            <li><a href="#"><img src="../assets/img/user/user-2.jpg" alt="" /></a></li>
-                            <li><a href="#"><img src="../assets/img/user/user-3.jpg" alt="" /></a></li>
-                            <li><a href="#"><img src="../assets/img/user/user-4.jpg" alt="" /></a></li>
-                            <li><a href="#"><img src="../assets/img/user/user-5.jpg" alt="" /></a></li>
-                            <li><a href="#"><img src="../assets/img/user/user-6.jpg" alt="" /></a></li>
-                            <li><a href="#"><img src="../assets/img/user/user-7.jpg" alt="" /></a></li>
-                            <li><a href="#"><img src="../assets/img/user/user-8.jpg" alt="" /></a></li>
-                            <li><a href="#"><img src="../assets/img/user/user-9.jpg" alt="" /></a></li>
-                        </ul>
-                    </div>
-                    <!-- end section-container -->
-                </div>
-                <!-- end col-4 -->
-            </div>
-            <!-- end row -->
-        </div>
+        @yield('footer')
         <!-- end container -->
     </div>
     <!-- end #footer -->
     <!-- begin #footer-copyright -->
     <div id="footer-copyright" class="footer-copyright">
         <div class="container">
-            &copy; 2014 - 2017 SeanTheme All Right Reserved
-            <a href="#">Contact Us</a> 
-            <a href="#">Knowledge Base</a>
+            &copy; 2020 Build With <i class='uil uil-heart text-danger font-size-12'></i> - Andri Desmana
         </div>
     </div>
     <!-- end #footer-copyright -->

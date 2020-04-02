@@ -9,19 +9,21 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         
         <!-- App favicon -->
-        <link rel="shortcut icon" href="{{asset('backend/images/favicon.ico')}}">
+        <link rel="shortcut icon" href="{{asset('frontend/img/icon/yadika.png')}}">
 
         <!-- plugins -->
         <link href="{{asset('backend/libs/flatpickr/flatpickr.min.css')}}" rel="stylesheet" type="text/css" />
 
         <!-- App css -->
-        <link href="{{asset('backend/css/bootstrap-dark.min.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{asset('backend/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" />
         <link href="{{asset('backend/css/icons.min.css')}}" rel="stylesheet" type="text/css" />
-        <link href="{{asset('backend/css/app-dark.min.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{asset('backend/css/app.min.css')}}" rel="stylesheet" type="text/css" />
+
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.20/datatables.min.css"/>
 
     </head>
 
-    <body>
+    <body class="left-side-menu-dark">
         <!-- Begin page -->
         <div id="wrapper">
 
@@ -31,11 +33,11 @@
                     <!-- LOGO -->
                     <a href="/" class="navbar-brand mr-0 mr-md-2 logo">
                         <span class="logo-lg">
-                            <img src="{{asset('backend/images/logo.png')}}" alt="" height="24" />
-                            <span class="d-inline h5 ml-1 text-logo">Shreyu</span>
+                            <img src="{{asset('frontend/img/icon/yadika.png')}}" alt="" height="24" />
+                            <span class="d-inline h5 ml-1 text-logo">SMK YADIKA NATAR</span>
                         </span>
                         <span class="logo-sm">
-                            <img src="{{asset('backend/images/logo.png')}}" alt="" height="24">
+                            <img src="{{asset('frontend/img/icon/yadika.png')}}" alt="" height="24">
                         </span>
                     </a>
 
@@ -62,7 +64,7 @@
                                 <div class="dropdown-item noti-title border-bottom">
                                     <h5 class="m-0 font-size-16">
                                         <span class="float-right">
-                                            <a href="" class="text-dark">
+                                            <a href="" class="text">
                                                 <small>Clear All</small>
                                             </a>
                                         </span>Notification
@@ -238,6 +240,13 @@
                                 <a href="{{route('pengguna.index')}}" aria-expanded="false">
                                     <i data-feather="user-check"></i>
                                     <span> Pengguna </span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="{{url('calon-murid')}}" aria-expanded="false">
+                                    <i data-feather="user-plus"></i>
+                                    <span> Calon Murid Baru </span>
                                 </a>
                             </li>
 
@@ -687,7 +696,7 @@
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-12">
-                                2020 &copy; dibuat dengan <i class='uil uil-heart text-danger font-size-12'></i> - <a href="www.twitter.com/andri_desmana" target="_blank">Andri Desmana</a>
+                                2020 &copy; Build With <i class='uil uil-heart text-danger font-size-12'></i> - <a href="www.twitter.com/andri_desmana" target="_blank">Andri Desmana</a>
                             </div>
                         </div>
                     </div>
@@ -721,6 +730,15 @@
         <!-- App js -->
         <script src="{{asset('backend/js/app.min.js')}}"></script>  
 
+        <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.20/datatables.min.js"></script>
+
+        <script type="text/javascript">
+            $('#myTable').DataTable( {
+                responsive: {
+                    details: false
+                }
+            } );
+        </script>
         @yield('scripts')
     </body>
 </html>

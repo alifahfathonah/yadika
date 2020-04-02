@@ -99,6 +99,12 @@
             </div>
             <div class="col-lg-6 col-xl-6 col-12" style="margin-top:5px">
                 <div class="form-group">
+                    <label for="nama">Email</label>
+                    <input type="email" name="email_murid" class="form-control" required>
+                </div>
+            </div>
+            <div class="col-lg-3 col-xl-3 col-12" style="margin-top:5px">
+                <div class="form-group">
                     <label for="nama">Jurusan</label>
                     <select name="jurusan" class="form-control" required>
                         <option value="">-- Pilih --</option>
@@ -109,7 +115,7 @@
                     </select>
                 </div>
             </div>
-            <div class="col-lg-6 col-xl-6 col-12" style="margin-top:5px">
+            <div class="col-lg-3 col-xl-3 col-12" style="margin-top:5px">
                 <div class="form-group">
                     <label for="nama">Mendapatkan Info Dari</label>
                     <select name="info" class="form-control" required>
@@ -129,4 +135,7 @@
             </div>
         </form>
     </div>
+@endsection
+@section('footer')
+    @include('frontend.partials.footer')
 @endsection

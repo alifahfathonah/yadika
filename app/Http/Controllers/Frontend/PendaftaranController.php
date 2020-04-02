@@ -11,7 +11,7 @@ class PendaftaranController extends Controller
     // Form
     public function index()
     {
-        return view('frontend.pendaftaran.index');
+        return view('frontend.informasi.pendaftaran_on');
     }
 
     // Proses
@@ -31,9 +31,18 @@ class PendaftaranController extends Controller
         $pendaftaran->pekerjaan_ayah = $request->pekerjaan_ayah;
         $pendaftaran->no_hp = $request->no_hp;
         $pendaftaran->no_hp_ortu = $request->no_hp_ortu;
+        $pendaftaran->email_murid = $request->email_murid;
         $pendaftaran->jurusan = $request->jurusan;
         $pendaftaran->info = $request->info;
+        $pendaftaran->status = 'Belum';
         $pendaftaran->save();
         
+        return redirect('sukses-daftar');
+    }
+
+    // Sukses Pendaftaran
+    public function suksesdaftar()
+    {
+        return view('frontend.informasi.sukses');
     }
 }

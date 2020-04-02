@@ -25,3 +25,6 @@
     @include('frontend.partials.berita')
 </div>
 @endsection
+@section('footer')
+    @include('frontend.partials.footer')
+@endsection
