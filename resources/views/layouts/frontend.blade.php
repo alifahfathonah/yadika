@@ -21,7 +21,8 @@
 	<!-- ================== END BASE CSS STYLE ================== -->
 	<link href="{{asset('backend/css/icons.min.css')}}" rel="stylesheet" type="text/css" />
 	<!-- ================== BEGIN BASE JS ================== -->
-	<script src="{{asset('frontend/plugins/pace/pace.min.js')}}"></script>
+    <script src="{{asset('frontend/plugins/pace/pace.min.js')}}"></script>
+    <link rel="stylesheet" href="{{asset('frontend/css/frontend.css')}}">
 	<!-- ================== END BASE JS ================== -->
 </head>
 <body>
@@ -79,7 +80,12 @@
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     {{-- <li><a href="{{route('register')}}">Daftar Akun</a></li> --}}
-                    <li><a href="{{route('login')}}"><b>Masuk</b></a></li>
+                    @auth
+                        <li><a href="">{{auth::user()->name}}</a></li>
+                        <li><a href="">Keluar</a></li>
+                    @else
+                        <li><a href="{{route('login')}}"><b>Masuk</b></a></li>
+                    @endauth
                 </ul>
             </div>
             <!-- end #header-navbar -->

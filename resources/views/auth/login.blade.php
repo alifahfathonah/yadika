@@ -98,20 +98,19 @@
                                         <i class="icon-dual" data-feather="mail"></i>
                                     </span>
                                 </div>
-                                <input type="email" name="email" class="form-control" id="email" placeholder="smkyadika@gmail.com">
+                                <input type="email" name="email" class="form-control @error('email') is-invalid @enderror" id="email" placeholder="smkyadika@gmail.com" value="{{ old('email') }}" required autocomplete="email" autofocus>
                             </div>
                         </div>
 
                         <div class="form-group mt-4">
                             <label class="form-control-label">Password</label>
-                            {{-- <a href="pages-recoverpw.html" class="float-right text-muted text-unline-dashed ml-1">Forgot your password?</a> --}}
                             <div class="input-group input-group-merge">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text">
                                         <i class="icon-dual" data-feather="lock"></i>
                                     </span>
                                 </div>
-                                <input type="password" name="password" class="form-control" id="password"
+                                <input type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" id="password"
                                     placeholder="Enter your password">
                             </div>
                         </div>
@@ -139,11 +138,11 @@
     </div>
     <!-- end card -->
 
-    <div class="row mt-3">
+    {{-- <div class="row mt-3">
         <div class="col-12 text-center">
             <p class="text-muted">Don't have an account? <a href="pages-register.html" class="text-primary font-weight-bold ml-1">Sign Up</a></p>
         </div> <!-- end col -->
-    </div>
+    </div> --}}
     <!-- end row -->
 
 </div> 

@@ -14,7 +14,7 @@ class CalonMuridController extends Controller
     {
         if (auth::check()) {
             if (auth::user()->auth == '1') {
-                $new_murid = pendaftaran::all();
+                $new_murid = pendaftaran::orderBy('id','DESC')->get();
 
                 $siswa = pendaftaran::where('jenis_kelamin','Laki-laki')->count();
                 $siswi = pendaftaran::where('jenis_kelamin','Perempuan')->count();

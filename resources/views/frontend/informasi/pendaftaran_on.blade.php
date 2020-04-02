@@ -1,6 +1,26 @@
 @extends('layouts.frontend')
 @section('content')
     <div class="panel panel-forum">
+        <div class="row">
+            <div class="col-lg-6" style="background-size: cover; background-repeat: no-repeat; background-position: center; background-image: url('frontend/img/bg/ujian.png'); height:290px; width:400px">
+            </div>
+            <div class="col-lg-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="text-center" style="color:slateblue; font-weight:bold">PENDAFTARAN CALON SISWA/SISWI BARU SMK YADIKA NATAR</h3>
+                        <p style="padding-left:3px;color:black">Tata Cara Pendaftaran Online :</p>
+                        <ol>
+                            <li>Mengisi semua form dengan benar</li>
+                            <li>Tanpa ada paksaan dari pihak lain</li>
+                            <li>Bersedia dihubungi oleh tim SMK YADIKA NATAR</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel panel-forum">
         <div class="panel-heading">
             <h4 class="panel-title">Form Pendaftaran Online</h4>
         </div>

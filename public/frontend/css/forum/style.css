@@ -93,10 +93,11 @@ Website: http://www.seantheme.com/color-admin-v4.0/frontend/forum/
 
 body {
     padding-top: 60px;
-    background: #fff;
+    background: #6e7179;
     font-size: 12px;
     font-family: 'Open Sans', "Helvetica Neue",Helvetica,Arial,sans-serif;
     color: #707478;
+    
 }
 a {
     color: #00acac;
