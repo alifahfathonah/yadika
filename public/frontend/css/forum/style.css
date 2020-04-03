@@ -294,6 +294,7 @@ a:focus {
 
 .content {
     padding: 30px 0 60px;
+    margin-bottom: -4%;
 }
 
 
@@ -643,7 +644,7 @@ a:focus {
 .footer {
     margin: 0;
     border: none;
-    padding: 60px 0 30px;
+    padding: 20px 0 30px;
     background: #242a30;
     box-shadow: inset 0 100px 80px -80px rgba(0,0,0,.7);
     -webkit-box-shadow: inset 0 100px 80px -80px rgba(0,0,0,.7);
@@ -653,7 +654,7 @@ a:focus {
     color: #CFD0D1;
     font-size: 14px;
     letter-spacing: 0.5px;
-    margin: 0 0 20px;
+    margin: 0 0 10px;
 }
 .footer p {
     color: #A6A9AB;
@@ -698,7 +699,7 @@ a:focus {
 /* 6.2 Footer Copyright Setting */
 
 .footer-copyright {
-    padding: 20px 0;
+    padding: 10px 0;
     color: #A6A9AB;
     background: #1d2226;
 }

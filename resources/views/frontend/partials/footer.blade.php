@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container-fluid">
     <!-- begin row -->
     <div class="row">
         <!-- begin col-4 -->

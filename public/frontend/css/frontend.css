@@ -64,4 +64,19 @@
     overflow: hidden;
     text-overflow: ellipsis;
   }
+
+  .slider {
+    padding: 1%;
+  }
+  .carousel-inner {
+      max-height: 450px;
+      background-size: cover;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-position: center; 
+  }
+  .slide {
+      margin:0%!important;
+      padding: 0%;
+  }
   

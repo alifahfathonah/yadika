@@ -95,7 +95,7 @@
     <!-- end #header -->
     
     <!-- begin search-banner -->
-    <div class="search-banner has-bg">
+    {{-- <div class="search-banner has-bg">
         <!-- begin bg-cover -->
         <div class="bg-cover">
             <img src="{{asset('frontend/img/cover/cover-1.jpg')}}"/>
@@ -107,13 +107,14 @@
             <h5 style="text-align:center">Sekolah Unggul dan Berprestasi</h5>
         </div>
         <!-- end container -->
-    </div>
+    </div> --}}
+    @yield('slide')
     <!-- end search-banner -->
     
     <!-- begin content -->
     <div class="content">
         <!-- begin container -->
-        <div class="container">
+        <div class="container-fluid">
             @yield('content')
         </div>
         <!-- end container -->
@@ -129,7 +130,7 @@
     <!-- end #footer -->
     <!-- begin #footer-copyright -->
     <div id="footer-copyright" class="footer-copyright">
-        <div class="container">
+        <div class="container-fluid">
             &copy; 2020 Build With <i class='uil uil-heart text-danger font-size-12'></i> - Andri Desmana
         </div>
     </div>

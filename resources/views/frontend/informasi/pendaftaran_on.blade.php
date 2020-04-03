@@ -2,7 +2,10 @@
 @section('content')
     <div class="panel panel-forum">
         <div class="row">
-            <div class="col-lg-6" style="background-size: cover; background-repeat: no-repeat; background-position: center; background-image: url('frontend/img/bg/ujian.png'); height:290px; width:400px">
+            <div class="col-lg-6">
+                <div class="card" style="background-size: cover; background-repeat: no-repeat; background-position: center; background-image: url('frontend/img/bg/ujian.png'); height:290px; ">
+
+                </div>
             </div>
             <div class="col-lg-6">
                 <div class="card">
