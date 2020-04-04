@@ -5,7 +5,7 @@
         <div class="card">
             <div class="card-body">
                 <h4 class="header-title mt-0 mb-1">Data Pengguna</h4>
-                <table id="basic-datatable" class="table dt-responsive nowrap">
+                <table id="myTable" class="table table-responsive nowrap">
                     <thead>
                         <tr>
                             <th>Nama</th>

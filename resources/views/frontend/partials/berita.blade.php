@@ -26,4 +26,13 @@
             </div>
         </div>
     </div>
+    <div class="col-12 col-lg-12 col-xl-12">
+        <a href="" style="text-decoration:none;">
+            <div class="card nextb">
+                <div class="body-card">
+                    <p style="font-size:15px; color:white">Lihat Semua<i class='uil-arrow-right'></i></p>
+                </div>
+            </div>
+        </a>
+    </div>
 </div>

@@ -67,7 +67,7 @@
         <div class="card">
             <div class="card-body">
                 <h4 class="header-title mt-0 mb-1">Data Calon Murid</h4>
-                <table id="myTable" class="table table-responsive">
+                <table id="myTable" class="table table-responsive nowrap">
                     <thead>
                         <tr>
                             <th>Nama</th>

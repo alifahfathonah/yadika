@@ -1,23 +1,23 @@
 @extends('layouts.frontend')
 @section('slide')
-@include('frontend.partials.slider')
+    @include('frontend.partials.slider')
 @endsection
 @section('content')
 <div class="row">
     <div class="col-xl-6 col-lg-6 col-12">
         <div class="panel panel-forum">
             <div class="panel-heading">
-                <h4 class="panel-title" style="color:black;">Mading Sekolah</h4>
+                <h4 class="panel-title" style="color:black;">Informasi Sekolah</h4>
             </div>
-                @include('frontend.partials.info')
+                @include('frontend.partials.info_penting')
         </div>
     </div>
     <div class="col-xl-6 col-lg-6 col-12">
         <div class="panel panel-forum">
             <div class="panel-heading">
-                <h4 class="panel-title" style="color:black;">Informasi Pendaftaran</h4>
+                 <h4 class="panel-title" style="color:black;">Mading Sekolah</h4>
             </div>
-                @include('frontend.partials.pendaftaran')
+                @include('frontend.partials.info')
         </div>
     </div>
 </div>
@@ -31,7 +31,7 @@
 
 <div class="panel panel-forum">
     <div class="panel-heading">
-        <h4 class="panel-title text-center" style="color:black">----- //\\ -----</h4>
+        <h4 class="panel-title text-center" style="color:black">----- // SEKILAS TENTANG SMK YADIKA NATAR \\ -----</h4>
     </div>
     @include('frontend.partials.about')
 </div>

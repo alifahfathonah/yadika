@@ -6,8 +6,8 @@
     padding:2%;
     background-color: steelblue;
     color: white;
-    max-height: 130px;
-    height: 130px;
+    max-height: 145px;
+    height: 145px;
     max-width: 100%;
   }
   
@@ -24,8 +24,8 @@
     /* background-color: teal; */
     background-color: steelblue;
     color: white;
-    max-height: 40px;
-    height: 40px;
+    max-height: 70px;
+    height: 70px;
     max-width: 100%;
   }
   
@@ -41,6 +41,38 @@
     margin: 2%;
     padding: 2%;
     background-color: cornsilk;
+  }
+
+  .card-pages {
+    box-shadow: 0 5px 5px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    max-height: 340px;
+    height: 340px;
+    border-radius: 5px;
+    margin: 2%;
+    padding: 2%;
+    background-color: cornsilk;
+  }
+
+  .nexta {
+    box-shadow: 0 5px 5px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    max-height: 30px;
+    height: 30px;
+    border-radius: 5px;
+    margin: 2%;
+    padding-top: 0.5%;
+    text-align: center;
+    background-color: cornsilk;
+  }
+
+  .nextb {
+    box-shadow: 0 5px 5px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    max-height: 30px;
+    height: 30px;
+    border-radius: 5px;
+    margin: 2%;
+    padding-top: 0.5%;
+    text-align: center;
+    background-color: steelblue;
   }
 
   .title {
@@ -68,15 +100,11 @@
   .slider {
     padding: 1%;
   }
-  .carousel-inner {
-      max-height: 450px;
+  .carousel-inner{
+      max-height: 400px;
       background-size: cover;
       background-attachment: fixed;
       background-repeat: no-repeat;
       background-position: center; 
-  }
-  .slide {
-      margin:0%!important;
-      padding: 0%;
   }
   

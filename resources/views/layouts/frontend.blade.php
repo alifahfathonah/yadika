@@ -46,6 +46,34 @@
             <div class="collapse navbar-collapse" id="header-navbar">
                 <ul class="nav navbar-nav navbar-left">
                     <li><a href="/"><b>Home</b></a></li>
+
+                    <li class="dropdown">
+                        <a href="javascript:;" data-toggle="dropdown"><b>Program Keahlian</b> <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{{url('teknik-komputer-&-jaringan')}}">Teknik Komputer & Jaringan (TKJ)</a></li>
+                            <li><a href="{{url('teknik-otomotif')}}">Teknik Otomotif (TKR)</a></li>
+                            <li><a href="{{url('administrasi-perkantoran')}}">Administrasi Perkantoran (AP)</a></li>
+                            <li><a href="{{url('akuntansi')}}">Akuntansi (AK)</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="javascript:;" data-toggle="dropdown"><b>Civitas Akademik</b> <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="">Guru dan Staf</a></li>
+                            <li><a href="">Prestasi</a></li>
+                            <li><a href="">Organisasi</a></li>
+                            <li><a href="">Ekstrakurikuler</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="javascript:;" data-toggle="dropdown"><b>Informasi</b> <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{{url('pendaftaran-online')}}">Pendaftaran Online</a></li>
+                        </ul>
+                    </li>
+
                     <li class="dropdown">
                         <a href="javascript:;" data-toggle="dropdown"><b>Tentang Kami</b> <b class="caret"></b></a>
                         <ul class="dropdown-menu">
@@ -54,29 +82,10 @@
                             <li><a href="">Profile</a></li>
                             <li><a href="">Kepala Sekolah</a></li>
                             <li><a href="">Visi dan Misi</a></li>
-                            <li><a href="">Tujuan</a></li>
-                            <li><a href="">Yayasan</a></li>
-                            <li><a href="">Guru dan Staf</a></li>
-                            <li><a href="">Prestasi</a></li>
-                            <li><a href="">Organisasi</a></li>
-                            <li><a href="">Ekstrakurikuler</a></li>
+                             
                         </ul>
                     </li>
-                    <li class="dropdown">
-                        <a href="javascript:;" data-toggle="dropdown"><b>Program Keahlian</b> <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="">Teknik Komputer & Jaringan</a></li>
-                            <li><a href="">Otomotif</a></li>
-                            <li><a href="">Administrasi Perkantoran</a></li>
-                            <li><a href="">Akuntansi</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="javascript:;" data-toggle="dropdown"><b>Informasi</b> <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="{{url('pendaftaran-online')}}">Pendaftaran Online</a></li>
-                        </ul>
-                    </li>
+                   
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     {{-- <li><a href="{{route('register')}}">Daftar Akun</a></li> --}}
@@ -93,21 +102,6 @@
         <!-- end container -->
     </div>
     <!-- end #header -->
-    
-    <!-- begin search-banner -->
-    {{-- <div class="search-banner has-bg">
-        <!-- begin bg-cover -->
-        <div class="bg-cover">
-            <img src="{{asset('frontend/img/cover/cover-1.jpg')}}"/>
-        </div>
-        <!-- end bg-cover -->
-        <!-- begin container -->
-        <div class="container">
-            <h2 style="text-align:center">OFFICIAL WEBSITE SMK YADIKA NATAR</h2>
-            <h5 style="text-align:center">Sekolah Unggul dan Berprestasi</h5>
-        </div>
-        <!-- end container -->
-    </div> --}}
     @yield('slide')
     <!-- end search-banner -->
     
