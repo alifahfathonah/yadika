@@ -31,11 +31,7 @@ class PenggunaController extends Controller
      */
     public function create()
     {
-        if (auth::check()) {
-            if (auth::user()->auth == 1) {
-                return view('backend.pengguna.create');
-            }
-        }
+       //
     }
 
     /**

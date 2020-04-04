@@ -117,18 +117,18 @@
 
 
                         <div class="form-group mb-0 text-center">
-                            <button class="btn btn-primary btn-block" type="submit"> Log In
+                            <button class="btn btn-primary btn-block" type="submit"> Masuk
                             </button>
                         </div>
                     </form>
                 </div>
                 <div class="col-lg-6 d-none d-md-inline-block">
-                    <div class="auth-page-sidebar">
+                    <div class="auth-page-sidebar" style="background-size: cover; background-repeat: no-repeat; background-position: center; background-image: url('backend/images/auth-bg.png'); max-height:100%; max-width:100%">
                         <div class="overlay"></div>
                         <div class="auth-user-testimonial">
-                            <p class="font-size-24 font-weight-bold text-white mb-1">I simply love it!</p>
-                            <p class="lead">"It's a elegent templete. I love it very much!"</p>
-                            <p>- Admin User</p>
+                            <p class="font-size-24 font-weight-bold text-white mb-1">NEVER GIVE UP</p>
+                            <p class="lead">Orang yang ingin impiannya tercapai, harus menjaga diri agar tidak tertidur</p>
+                            <p>- Andri Desmana</p>
                         </div>
                     </div>
                 </div>

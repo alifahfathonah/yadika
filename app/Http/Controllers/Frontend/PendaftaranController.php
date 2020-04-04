@@ -5,13 +5,17 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\pendaftaran;
+use App\page;
 
 class PendaftaranController extends Controller
 {
     // Form
     public function index()
     {
-        return view('frontend.informasi.pendaftaran_on');
+        $cek = page::where('pages','ro')->first();
+        $isi = page::where('pages','ro')->get();
+        
+        return view('frontend.pages.informasi.pendaftaran_on', compact('isi','cek'));
     }
 
     // Proses
@@ -43,6 +47,6 @@ class PendaftaranController extends Controller
     // Sukses Pendaftaran
     public function suksesdaftar()
     {
-        return view('frontend.informasi.sukses');
+        return view('frontend.pages.informasi.sukses');
     }
 }

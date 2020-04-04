@@ -11,7 +11,7 @@
             </div>
         </div>
         <div class="col-lg-6 col-lg-6 col-md-6 col-sm-6 col-12">
-            <div class="card-pages" style="background-size: cover; background-repeat: no-repeat; background-position: center; background-image: url('frontend/img/bg/body.png'); max-height:100%; max-width:100%">
+            <div class="card-pages" style="background-size: cover; background-repeat: no-repeat; background-position: center; background-image: url('frontend/img/bg/syarat.png'); max-height:100%; max-width:100%">
             </div>
         </div>
     </div>

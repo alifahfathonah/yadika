@@ -14,10 +14,13 @@
         <!-- plugins -->
         <link href="{{asset('backend/libs/flatpickr/flatpickr.min.css')}}" rel="stylesheet" type="text/css" />
 
+        <!-- Summernote css -->
+        <link href="{{asset('backend/libs/summernote/summernote-bs4.css')}}" rel="stylesheet" />
+
         <!-- App css -->
         <link href="{{asset('backend/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" />
         <link href="{{asset('backend/css/icons.min.css')}}" rel="stylesheet" type="text/css" />
-        <link href="{{asset('backend/css/app.min.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{asset('backend/css/app.css')}}" rel="stylesheet" type="text/css" />
 
         <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.20/datatables.min.css"/>
 
@@ -249,35 +252,101 @@
                                     <span> Calon Murid Baru </span>
                                 </a>
                             </li>
-
+                            <li class="menu-title">Pages</li>
                             <li>
                                 <a href="javascript: void(0);">
                                     <i data-feather="grid"></i>
-                                    <span> Pages </span>
+                                    <span> Program Keahlian </span>
                                     <span class="menu-arrow"></span>
                                 </a>
     
                                 <ul class="nav-second-level" aria-expanded="false">
                                     <li>
-                                        <a href="{{url('pages-sejarah-yadika')}}">Sejarah Yadika</a>
+                                        <a href="{{url('pages-tkj')}}">Teknik Komputer & Jaringan</a>
                                     </li>
                                     <li>
-                                        <a href="{{url('pages-sejarah-smk')}}">Sejarah SMK</a>
+                                        <a href="{{url('pages-tkr')}}">Teknik Otomotif</a>
                                     </li>
                                     <li>
-                                        <a href="{{url('pages-profile')}}">Profile</a>
+                                        <a href="{{url('pages-ap')}}">Administrasi Perkantoran</a>
                                     </li>
                                     <li>
-                                        <a href="{{url('kepala-sekolah')}}">Kepala Sekolah</a>
+                                        <a href="{{url('pages-ak')}}">Akuntansi</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="javascript: void(0);">
+                                    <i data-feather="command"></i>
+                                    <span> Civitas Akademik </span>
+                                    <span class="menu-arrow"></span>
+                                </a>
+    
+                                <ul class="nav-second-level" aria-expanded="false">
+                                    <li>
+                                        <a href="{{url('pages-sejarah-yadika')}}">Guru & Staf</a>
                                     </li>
                                     <li>
-                                        <a href="{{url('visi-misi')}}">Visi & Misi</a>
+                                        <a href="{{url('pages-sejarah-smk')}}">Prestasi</a>
                                     </li>
                                     <li>
-                                        <a href="{{url('guru-staf')}}">Guru & Staf</a>
+                                        <a href="{{url('pages-profile')}}">Organisasi</a>
                                     </li>
                                     <li>
-                                        <a href="{{url('program-studi')}}">Program Studi</a>
+                                        <a href="{{url('kepala-sekolah')}}">Ekstrakurikuler</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="javascript: void(0);">
+                                    <i data-feather="info"></i>
+                                    <span> Informasi </span>
+                                    <span class="menu-arrow"></span>
+                                </a>
+    
+                                <ul class="nav-second-level" aria-expanded="false">
+                                    <li>
+                                        <a href="{{url('pages-ro')}}">Pendaftaran Online</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="javascript: void(0);">
+                                    <i data-feather="layers"></i>
+                                    <span> Tentang Kami </span>
+                                    <span class="menu-arrow"></span>
+                                </a>
+                                <ul class="nav-second-level" aria-expanded="false">
+                                    <li>
+                                        <a href="{{url('pages-history')}}">Sejarah Yadika</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{url('pages-kepala-sekolah')}}">Kepala Sekolah</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{url('pages-visi-dan-misi')}}">Visi & Misi</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="javascript: void(0);">
+                                    <i data-feather="layers"></i>
+                                    <span>Frontend</span>
+                                    <span class="menu-arrow"></span>
+                                </a>
+                                <ul class="nav-second-level" aria-expanded="false">
+                                    <li>
+                                        <a href="{{url('front-info')}}">Informasi Sekolah</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{url('front-mading')}}">Mading Sekolah</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{url('front-about')}}">About</a>
                                     </li>
                                 </ul>
                             </li>
@@ -354,7 +423,11 @@
         <script src="{{asset('backend/js/pages/dashboard.init.js')}}"></script>
 
         <!-- App js -->
-        <script src="{{asset('backend/js/app.min.js')}}"></script>  
+        <script src="{{asset('backend/js/app.min.js')}}"></script>
+        <script src="{{asset('backend/js/pages/form-editor.init.js')}}"></script>  
+        
+        <!--Summernote js-->
+        <script src="{{asset('backend/libs/summernote/summernote-bs4.min.js')}}"></script>
 
         <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.20/datatables.min.js"></script>
 

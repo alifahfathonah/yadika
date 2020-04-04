@@ -11,12 +11,13 @@
                 <div class="card">
                     <div class="card-body">
                         <h3 class="text-center" style="color:slateblue; font-weight:bold">PENDAFTARAN CALON SISWA/SISWI BARU SMK YADIKA NATAR</h3>
-                        <p style="padding-left:3px;color:black">Tata Cara Pendaftaran Online :</p>
-                        <ol>
-                            <li>Mengisi semua form dengan benar</li>
-                            <li>Tanpa ada paksaan dari pihak lain</li>
-                            <li>Bersedia dihubungi oleh tim SMK YADIKA NATAR</li>
-                        </ol>
+                        @if ($cek == !null)
+                            @foreach ($isi as $item)
+                                {!!$item->isi!!}
+                            @endforeach
+                        @else
+                            Deskripsi Belum diisi !
+                        @endif
                     </div>
                 </div>
             </div>

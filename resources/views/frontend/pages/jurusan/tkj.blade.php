@@ -48,7 +48,13 @@
             <div class="card">
                 <div class="body-card">
                     <h4 class="text-center" style="color:slateblue; font-weight:bold">SEKILAS TENTANG TEKNIK KOMPUTER & JARINGAN</h4>
-                <p style="color:black; padding-left:5px; font-size:13px">Halo, ini adalah halaman untuk pengenalan sekolah, harap isi mengenai yadika dengan singkat.</p>
+                    @if ($cek == !null)
+                        @foreach ($isi as $item)
+                            {!!$item->isi!!}            
+                        @endforeach
+                    @else
+                        Deskripsi belum diisi !
+                    @endif
                 </div>
             </div>
         </div>

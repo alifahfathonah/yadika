@@ -9,7 +9,7 @@
             <div class="panel-heading">
                 <h4 class="panel-title" style="color:black;">Informasi Sekolah</h4>
             </div>
-                @include('frontend.partials.info_penting')
+                @include('frontend.partials.info_sekolah')
         </div>
     </div>
     <div class="col-xl-6 col-lg-6 col-12">
@@ -17,7 +17,7 @@
             <div class="panel-heading">
                  <h4 class="panel-title" style="color:black;">Mading Sekolah</h4>
             </div>
-                @include('frontend.partials.info')
+                @include('frontend.partials.mading')
         </div>
     </div>
 </div>

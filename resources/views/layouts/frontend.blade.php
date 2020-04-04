@@ -77,11 +77,11 @@
                     <li class="dropdown">
                         <a href="javascript:;" data-toggle="dropdown"><b>Tentang Kami</b> <b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li><a href="">Sejarah Yadika</a></li>
-                            <li><a href="">Sejarah SMK</a></li>
-                            <li><a href="">Profile</a></li>
-                            <li><a href="">Kepala Sekolah</a></li>
-                            <li><a href="">Visi dan Misi</a></li>
+                            <li><a href="{{url('sejarah-yadika')}}">Sejarah Yadika</a></li>
+                            {{-- <li><a href="">Sejarah SMK</a></li>
+                            <li><a href="">Profile</a></li> --}}
+                            <li><a href="{{url('kepala-sekolah')}}">Kepala Sekolah</a></li>
+                            <li><a href="{{url('visi-dan-misi')}}">Visi dan Misi</a></li>
                              
                         </ul>
                     </li>
