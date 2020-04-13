@@ -1,4 +1,4 @@
-<div class="slide">
+{{-- <div class="slide">
     <div id="sliderfoto" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
         <ol class="carousel-indicators">
@@ -26,4 +26,4 @@
         <span class="sr-only">Next</span>
         </a>
     </div>
-</div>
+</div> --}}
