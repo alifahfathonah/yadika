@@ -13,7 +13,7 @@ class FrontendController extends Controller
     public function welcome()
     {
         @$slider = slider::where('status','Aktif')->get();
-        $sliders = slider::where('status','Aktif')->first();
+        @$sliders = slider::where('status','Aktif')->first();
         
         $info = front::where("kat","info")->limit(2)->orderBy('id','desc')->get();
         $mading = front::where("kat","mading")->limit(3)->orderBy('id','desc')->get();
