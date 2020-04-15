@@ -71,4 +71,7 @@ Route::get('/home', 'HomeController@index')->name('home');
         Route::get('front-about','Backend\FrontController@about');
         Route::post('front-store','Backend\FrontController@proses_front');
 
+    // Notification
+        Route::get('murid-baru-notification','Backend\CalonMuridController@notif');
+
         

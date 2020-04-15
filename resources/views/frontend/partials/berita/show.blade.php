@@ -1,6 +1,6 @@
 @extends('layouts.frontend')
 @section('content')
-    <div class="row">
+    <div class="row ">
         <div class="col-lg-8 col-xl-8 col-12">
             <div class="card card-berita">
                 <div class="card-body">
@@ -18,40 +18,27 @@
                     </span>
                 </div>
                 <br>
-            </div>
-            <div class="row">
-                <div class="col-lg-6 col-xl-6 col-6">
-                    <div class="card card-show">
-                        <div class="card-body">
-                            <h2>Judul Berita</h2>
-                        </div>
+            </div> <br>     
+
+            {{-- Berita Terkait --}}
+                <div class="panel panel-forum">
+                    <div class="panel-heading">
+                        <h4 class="panel-title text-center" style="color:black; font-weight:bold">Berita Terkait</h4>
                     </div>
+                    @include('frontend.partials.berita.terkait') <br>
                 </div>
-                <div class="col-lg-6 col-xl-6 col-6">
-                    <div class="card card-show">
-                        <div class="card-body">
-                            <h2>Judul Berita</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-xl-6 col-6">
-                    <div class="card card-show">
-                        <div class="card-body">
-                            <h2>Judul Berita</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-xl-6 col-6">
-                    <div class="card card-show">
-                        <div class="card-body">
-                            <h2>Judul Berita</h2>
-                        </div>
-                    </div>
+            {{-- End --}}
+        </div>
+        <br>
+        <div class="col-lg-4 col-xl-4 col-12">
+            <div class="card card-1 ">
+                <div class="card-body">
+                    <h4>Info Sekolah</h4>
                 </div>
             </div>
         </div>
         <div class="col-lg-4 col-xl-4 col-12">
-            <div class="card card-berita">
+            <div class="card card-1 ">
                 <div class="card-body">
                     <h4>Info Sekolah</h4>
                 </div>

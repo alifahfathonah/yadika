@@ -32,6 +32,7 @@ class CreatePendaftaransTable extends Migration
             $table->string('jurusan');
             $table->string('info');
             $table->string('status')->default('Belum');
+            $table->string('notif')->default(0);
             $table->timestamps();
         });
     }

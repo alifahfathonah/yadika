@@ -123,9 +123,11 @@
     </div>
     <!-- end #footer -->
     <!-- begin #footer-copyright -->
-    <div id="footer-copyright" class="footer-copyright">
+    <div class="footer-copyright">
         <div class="container-fluid">
-            &copy; 2020 Build With <i class='uil uil-heart text-danger font-size-12'></i> - Andri Desmana
+            <div class="row">
+                &copy; 2020 Build With <i class='uil uil-heart text-danger font-size-12'></i> - <a href="http://www.instagram.com/andridesmana" style="text-decoration:none" style="float:right" target="_blank"> Andri Desmana</a>
+            </div>
         </div>
     </div>
     <!-- end #footer-copyright -->

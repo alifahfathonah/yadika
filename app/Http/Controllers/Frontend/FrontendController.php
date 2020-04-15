@@ -19,7 +19,7 @@ class FrontendController extends Controller
         $info = front::where("kat","info")->limit(2)->orderBy('id','desc')->get();
         $mading = front::where("kat","mading")->limit(3)->orderBy('id','desc')->get();
         $about = front::where("kat","about")->limit(3)->orderBy('id','desc')->get();
-        $artikel = artikel::all();
+        $artikel = artikel::limit(4)->orderBy('id','desc')->get();
         
         $cek = front::where("kat","about")->limit(3)->orderBy('id','desc')->first();
 
@@ -30,6 +30,7 @@ class FrontendController extends Controller
     public function show_berita($slug)
     {
         $show = artikel::where('slug',$slug)->first();
-        return view('frontend.partials.berita.show', compact('show'));
+        $artikel = artikel::limit(4)->orderBy('id','desc')->get();
+        return view('frontend.partials.berita.show', compact('show','artikel'));
     }
 }

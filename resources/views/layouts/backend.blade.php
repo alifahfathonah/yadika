@@ -52,14 +52,19 @@
                             </button>
                         </li>
                     </ul>
-
+                    <?php
+                        $notif = App\Models\pendaftaran::where('notif',0)->orderBy('id','desc')->get();
+                        $belum = App\Models\pendaftaran::where('status','Belum')->get();
+                    ?>
                     <ul class="navbar-nav flex-row ml-auto d-flex list-unstyled topnav-menu float-right mb-0">
                         <li class="dropdown notification-list" data-toggle="tooltip" data-placement="left"
-                            title="8 new unread notifications">
+                            title=" {{$notif->count()}} Calon Murid Baru">
                             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="false"
                                 aria-expanded="false">
                                 <i data-feather="bell"></i>
-                                <span class="noti-icon-badge"></span>
+                                @if ($notif->count() >= 1)
+                                <span class="noti-icon-badge"></span>                                    
+                                @endif
                             </a>
                             <div class="dropdown-menu dropdown-menu-right dropdown-lg">
 
@@ -67,77 +72,26 @@
                                 <div class="dropdown-item noti-title border-bottom">
                                     <h5 class="m-0 font-size-16">
                                         <span class="float-right">
-                                            <a href="" class="text">
-                                                <small>Clear All</small>
-                                            </a>
                                         </span>Notification
                                     </h5>
                                 </div>
 
                                 <div class="slimscroll noti-scroll">
-
-                                    <!-- item-->
-                                    <a href="javascript:void(0);" class="dropdown-item notify-item border-bottom">
-                                        <div class="notify-icon bg-primary"><i class="uil uil-user-plus"></i></div>
-                                        <p class="notify-details">New user registered.<small class="text-muted">5 hours ago</small>
-                                        </p>
-                                    </a>
-
-                                    <!-- item-->
-                                    <a href="javascript:void(0);" class="dropdown-item notify-item border-bottom">
-                                        <div class="notify-icon">
-                                            <img src="assets/images/users/avatar-1.jpg" class="img-fluid rounded-circle" alt="" />
-                                        </div>
-                                        <p class="notify-details">Karen Robinson</p>
-                                        <p class="text-muted mb-0 user-msg">
-                                            <small>Wow ! this admin looks good and awesome design</small>
-                                        </p>
-                                    </a>
-
-                                    <!-- item-->
-                                    <a href="javascript:void(0);" class="dropdown-item notify-item border-bottom">
-                                        <div class="notify-icon">
-                                            <img src="assets/images/users/avatar-2.jpg" class="img-fluid rounded-circle" alt="" />
-                                        </div>
-                                        <p class="notify-details">Cristina Pride</p>
-                                        <p class="text-muted mb-0 user-msg">
-                                            <small>Hi, How are you? What about our next meeting</small>
-                                        </p>
-                                    </a>
-
-                                    <!-- item-->
-                                    <a href="javascript:void(0);" class="dropdown-item notify-item border-bottom active">
-                                        <div class="notify-icon bg-success"><i class="uil uil-comment-message"></i> </div>
-                                        <p class="notify-details">Jaclyn Brunswick commented on Dashboard<small class="text-muted">1
-                                                min
-                                                ago</small></p>
-                                    </a>
-
-                                    <!-- item-->
-                                    <a href="javascript:void(0);" class="dropdown-item notify-item border-bottom">
-                                        <div class="notify-icon bg-danger"><i class="uil uil-comment-message"></i></div>
-                                        <p class="notify-details">Caleb Flakelar commented on Admin<small class="text-muted">4 days
-                                                ago</small></p>
-                                    </a>
-
-                                    <!-- item-->
-                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                        <div class="notify-icon bg-primary">
-                                            <i class="uil uil-heart"></i>
-                                        </div>
-                                        <p class="notify-details">Carlos Crouch liked
-                                            <b>Admin</b>
-                                            <small class="text-muted">13 days ago</small>
-                                        </p>
-                                    </a>
+                                    @foreach ($notif as $item)
+                                        <a href="javascript:void(0);" id="murid_baru" data-id="{{$item->id}}" class="dropdown-item notify-item border-bottom">
+                                            <div class="notify-icon bg-primary"><i class="uil uil-user-plus"></i></div>
+                                            <p class="notify-details">{{$item->nama}}<small class="text-muted">{{Carbon\carbon::parse($item->created_at)->diffForHumans()}}</small>
+                                            </p>
+                                        </a>
+                                    @endforeach
                                 </div>
 
                                 <!-- All-->
-                                <a href="javascript:void(0);"
+                                {{-- <a href="{{$item->id}}"
                                     class="dropdown-item text-center text-primary notify-item notify-all border-top">
                                     View all
                                     <i class="fi-arrow-right"></i>
-                                </a>
+                                </a> --}}
 
                             </div>
                         </li>
@@ -218,10 +172,10 @@
 
                                 <ul class="nav-second-level" aria-expanded="false">
                                     <li>
-                                        <a href="email-inbox.html">Murid Aktif</a>
+                                        <a href="#">Murid Aktif</a>
                                     </li>
                                     <li>
-                                        <a href="email-read.html">Alumni</a>
+                                        <a href="#">Alumni</a>
                                     </li>
                                 </ul>
                             </li>
@@ -234,7 +188,7 @@
     
                                 <ul class="nav-second-level" aria-expanded="false">
                                     <li>
-                                        <a href="project-list.html">Guru Aktif</a>
+                                        <a href="#">Guru Aktif</a>
                                     </li>
                                 </ul>
                             </li>
@@ -249,7 +203,12 @@
                             <li>
                                 <a href="{{url('calon-murid')}}" aria-expanded="false">
                                     <i data-feather="user-plus"></i>
-                                    <span> Calon Murid Baru </span>
+                                    <span>Murid Baru</span> 
+                                    @if ($belum->count() >= 1)
+                                        <span class="badge badge badge-warning badge-pill float-right mr-2">Validasi {{$belum->count()}}</span>
+                                    @else
+                                        <span class="badge badge badge-info badge-pill float-right mr-2">{{$belum->count()}}</span>
+                                    @endif
                                 </a>
                             </li>
 
@@ -400,7 +359,7 @@
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-12">
-                                2020 &copy; Build With <i class='uil uil-heart text-danger font-size-12'></i> - <a href="www.twitter.com/andri_desmana" target="_blank">Andri Desmana</a>
+                                2020 &copy; Build With <i class='uil uil-heart text-danger font-size-12'></i> - <a href="http://www.instagram.com/andridesmana" target="_blank">Andri Desmana</a>
                             </div>
                         </div>
                     </div>
@@ -446,6 +405,15 @@
                     details: false
                 }
             } );
+
+            // Notification
+            $(document).on('click','#murid_baru', function () {
+                var id = $(this).attr('data-id');
+                $.get(' {{Url("murid-baru-notification")}}', {'_token' : $('meta[name=csrf-token]').attr('content'),id:id}, function(resp){
+                    // location.reload();
+                    window.location = '/calon-murid';
+                });
+            });
         </script>
         @yield('scripts')
     </body>

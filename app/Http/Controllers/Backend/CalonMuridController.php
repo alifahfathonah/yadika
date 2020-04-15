@@ -38,4 +38,19 @@ class CalonMuridController extends Controller
             }
         }
     }
+
+    // Notifikasi
+    public function notif(Request $request)
+    {
+        if (auth::check()) {
+            if (auth::user()->auth == '1') {
+                $notif = pendaftaran::find($request->id);
+                $notif->update([
+                    'notif' => 1
+                ]);
+                // return $notif;
+                return redirect('calon-murid');
+            }
+        }
+    }
 }

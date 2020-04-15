@@ -4,8 +4,9 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\pendaftaran;
-use App\page;
+use App\Models\pendaftaran;
+use App\Models\page;
+use App\Models\artikel;
 
 class PendaftaranController extends Controller
 {
@@ -14,8 +15,9 @@ class PendaftaranController extends Controller
     {
         $cek = page::where('pages','ro')->first();
         $isi = page::where('pages','ro')->get();
+        $artikel = artikel::limit(4)->orderBy('id','desc')->get();
         
-        return view('frontend.pages.informasi.pendaftaran_on', compact('isi','cek'));
+        return view('frontend.pages.informasi.pendaftaran_on', compact('isi','cek','artikel'));
     }
 
     // Proses
@@ -39,6 +41,7 @@ class PendaftaranController extends Controller
         $pendaftaran->jurusan = $request->jurusan;
         $pendaftaran->info = $request->info;
         $pendaftaran->status = 'Belum';
+        $pendaftaran->notif = 0;
         $pendaftaran->save();
         
         return redirect('sukses-daftar');
