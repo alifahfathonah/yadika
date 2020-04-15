@@ -648,6 +648,10 @@ a:focus {
     background: #242a30;
     box-shadow: inset 0 100px 80px -80px rgba(0,0,0,.7);
     -webkit-box-shadow: inset 0 100px 80px -80px rgba(0,0,0,.7);
+    /* position: fixed; */
+    left: 0;
+    bottom: 0;
+    width: 100%;
 }
 .footer h4 {
     font-weight: 600;
@@ -702,6 +706,10 @@ a:focus {
     padding: 10px 0;
     color: #A6A9AB;
     background: #1d2226;
+    /* position: fixed; */
+    left: 0;
+    bottom: 0;
+    width: 100%;
 }
 .footer-copyright a {
     float: right;

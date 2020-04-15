@@ -1,12 +1,12 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class page extends Model
+class front extends Model
 {
     protected $fillable = [
-        'isi','pages'
+        'isi','kat','info'
     ];
 }

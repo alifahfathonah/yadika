@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>Dashboard - SMK YADIKA NATAR</title>
+        <title>@yield('title')</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
         <meta content="Coderthemes" name="author" />
@@ -252,6 +252,15 @@
                                     <span> Calon Murid Baru </span>
                                 </a>
                             </li>
+
+                            <li>
+                                <a href="{{route('artikel.index')}}" aria-expanded="false">
+                                    <i data-feather="book"></i>
+                                    <span> Artikel/Berita</span>
+                                </a>
+                            </li>
+
+
                             <li class="menu-title">Pages</li>
                             <li>
                                 <a href="javascript: void(0);">
@@ -334,7 +343,7 @@
 
                             <li>
                                 <a href="javascript: void(0);">
-                                    <i data-feather="layers"></i>
+                                    <i data-feather="tv"></i>
                                     <span>Frontend</span>
                                     <span class="menu-arrow"></span>
                                 </a>

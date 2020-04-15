@@ -26,7 +26,7 @@
     <div class="panel-heading">
         <h4 class="panel-title text-center" style="color:black">Berita Sekolah</h4>
     </div>
-    @include('frontend.partials.berita')
+    @include('frontend.partials.berita.index')
 </div>
 
 <div class="panel panel-forum">

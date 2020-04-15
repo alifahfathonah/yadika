@@ -4,8 +4,9 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\slider;
-use App\front;
+use App\Models\slider;
+use App\Models\front;
+use App\Models\artikel;
 
 class FrontendController extends Controller
 {
@@ -18,9 +19,17 @@ class FrontendController extends Controller
         $info = front::where("kat","info")->limit(2)->orderBy('id','desc')->get();
         $mading = front::where("kat","mading")->limit(3)->orderBy('id','desc')->get();
         $about = front::where("kat","about")->limit(3)->orderBy('id','desc')->get();
+        $artikel = artikel::all();
         
         $cek = front::where("kat","about")->limit(3)->orderBy('id','desc')->first();
 
-        return view('frontend.index', compact('slider','sliders','info','mading','about','cek'));
+        return view('frontend.index', compact('slider','sliders','info','mading','about','artikel','cek'));
+    }
+
+    // Show Berita
+    public function show_berita($slug)
+    {
+        $show = artikel::where('slug',$slug)->first();
+        return view('frontend.partials.berita.show', compact('show'));
     }
 }

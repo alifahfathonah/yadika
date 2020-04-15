@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\front;
+use App\Models\front;
 use auth;
 
 class FrontController extends Controller

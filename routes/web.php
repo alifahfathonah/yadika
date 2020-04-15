@@ -30,6 +30,8 @@ use Illuminate\Support\Facades\Route;
         Route::get('kepala-sekolah','Frontend\PagesController@kepala_sekolah');
         Route::get('visi-dan-misi','Frontend\PagesController@visi_misi');
 
+        // Berita / Artikel
+        Route::get('berita/{slug}','Frontend\FrontendController@show_berita');
 
 Auth::routes();
 
@@ -60,8 +62,13 @@ Route::get('/home', 'HomeController@index')->name('home');
         Route::get('pages-visi-dan-misi','Backend\PagesController@visi_misi');
         Route::post('page-store','Backend\PagesController@page_store');
 
+    // Artikel
+    Route::resource('artikel','Backend\ArtikelController');
+
     // Front
         Route::get('front-info','Backend\FrontController@info');
         Route::get('front-mading','Backend\FrontController@mading');
         Route::get('front-about','Backend\FrontController@about');
         Route::post('front-store','Backend\FrontController@proses_front');
+
+        

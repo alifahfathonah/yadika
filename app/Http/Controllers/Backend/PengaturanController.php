@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\slider;
+use App\Models\slider;
 use Auth;
 
 class PengaturanController extends Controller
