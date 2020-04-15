@@ -50,6 +50,7 @@ class PendaftaranController extends Controller
     // Sukses Pendaftaran
     public function suksesdaftar()
     {
-        return view('frontend.pages.informasi.sukses');
+        $artikel = artikel::limit(4)->orderBy('id','desc')->get();
+        return view('frontend.pages.informasi.sukses', compact('artikel'));
     }
 }
