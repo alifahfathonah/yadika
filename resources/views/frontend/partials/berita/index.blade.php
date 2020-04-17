@@ -6,7 +6,7 @@
                     <div class="body-card">
                         <p class="title">{{$item->title}}</p>
                         <p class="sub-title">Posted By <span style="font-weight:bold">Andri</span> | Berita | {{Carbon\carbon::parse($item->created_at)->format('d-m-Y')}}</p>
-                        <p class="isi">{!! \Illuminate\Support\Str::limit($item->isi, 140, '...') !!}</p>
+                        <p class="isi">{!! \Illuminate\Support\Str::limit($item->isi, 130, '...') !!}</p>
                     </div>
                 </div>
             </a>

@@ -2,7 +2,7 @@
         <div class="col-lg-6 col-lg-6 col-md-6 col-sm-6 col-12">
             <div class="card">
                 <div class="card-pages">
-                    <h4 class="text-center" style="color:slateblue; font-weight:bold">PENDAFTARAN TAHUN AJARAN 2020/2021</h4>
+                    <h4 class="text-center" style="color:black; font-weight:bold"><u>PENDAFTARAN TAHUN AJARAN 2020/2021</u></h4>
                     <h5 class="p-l-5">Syarat dan Ketentuan :</h5>
                     <ol>
                         <li>Syarat dan Ketentuan di isi disini</li>

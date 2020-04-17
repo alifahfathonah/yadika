@@ -33,7 +33,9 @@ use Illuminate\Support\Facades\Route;
         // Berita / Artikel
         Route::get('berita/{slug}','Frontend\FrontendController@show_berita');
 
-Auth::routes();
+Auth::routes([
+    'register' => false,
+]);
 
 Route::get('/home', 'HomeController@index')->name('home');
 

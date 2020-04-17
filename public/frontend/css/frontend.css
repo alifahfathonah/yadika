@@ -40,7 +40,8 @@
     border-radius: 5px;
     margin: 2%;
     padding: 2%;
-    background-color: cornsilk;
+    background-color: lightslategrey;
+    color: white;
   }
 
   .card-berita {
@@ -79,7 +80,8 @@
     border-radius: 5px;
     margin: 2%;
     padding: 2%;
-    background-color: cornsilk;
+    background-color: slategray;
+    color: white;
   }
 
   .nexta {
@@ -166,5 +168,16 @@
     margin-right: auto;
     width: 80%;
     border-radius: 5px;
+  }
+
+  .card-sukses {
+    box-shadow: 0 5px 5px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    border-radius: 5px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center; 
+    height:400px;
+    max-height:400px;
+    background-color: white;
   }
 

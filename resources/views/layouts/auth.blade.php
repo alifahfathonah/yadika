@@ -12,14 +12,14 @@
         <link rel="shortcut icon" href="{{asset('backend/images/favicon.ico')}}">
 
         <!-- App css -->
+        <link href="{{asset('backend/css/components.css')}}" rel="stylesheet" type="text/css" />
         <link href="{{asset('backend/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" />
         <link href="{{asset('backend/css/icons.min.css')}}" rel="stylesheet" type="text/css" />
-        <link href="{{asset('backend/css/app.min.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{asset('backend/css/app.css')}}" rel="stylesheet" type="text/css" />
 
     </head>
 
     <body class="authentication-bg">
-        
         <div class="account-pages my-5">
             <div class="container">
                 <div class="row justify-content-center">

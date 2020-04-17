@@ -7,7 +7,7 @@
     <div class="row">
         <div class="col-lg-6 col-lg-6 col-md-6 col-sm-6 col-12">
             <div class="card-pages">
-                <h4 class="text-center" style="color:slateblue; font-weight:bold">VISI dan MISI</h4>
+                <h4 class="text-center" style="color:black; font-weight:bold"><u>VISI dan MISI</u></h4>
                 @if ($cek == !null)
                     @foreach ($isi as $item)
                         {!!$item->isi!!}

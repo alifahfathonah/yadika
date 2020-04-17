@@ -9,12 +9,18 @@
         @endforeach
     </div>
 </div>
-<div class="col-12">
-    <a href="" style="text-decoration:none">
-        <div class="card nexta">
-            <div class="body-card">
-                <p style="font-size:15px; ">Lihat Semua<i class='uil-arrow-right'></i></p>
+@if (@$item->id >= 4)
+    <div class="col-12">
+        <a href="" style="text-decoration:none">
+            <div class="card nexta">
+                <div class="body-card">
+                    <p style="font-size:15px; ">Lihat Semua<i class='uil-arrow-right'></i></p>
+                </div>
             </div>
-        </div>
-    </a>
-</div>
+        </a>
+    </div>
+@else
+    <div class="col text-center">
+        <h3>Informasi Masih Kosong !</h3>
+    </div>
+@endif

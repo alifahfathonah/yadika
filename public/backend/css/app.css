@@ -2794,7 +2794,8 @@ div.dt-button-info {
 body.authentication-bg {
   background-size: cover;
   background-repeat: no-repeat;
-  padding-bottom: 0; }
+  padding-bottom: 0;
+  background: url(../images/pages/vuexy-login-bg.jpg) no-repeat center center; }
 
 .authentication-form .form-group .input-group-text {
   background-color: transparent; }

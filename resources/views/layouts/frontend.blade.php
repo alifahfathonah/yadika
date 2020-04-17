@@ -32,6 +32,7 @@
         <div class="container">
             <!-- begin navbar-header -->
             <div class="navbar-header">
+                <p class="navbar-text visible-xs-inline-block"><a href="/" style="text-decoration:none; font-weight:bold; font-size:20px">SMK YADIKA NATAR</a></p>
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#header-navbar">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -90,8 +91,17 @@
                 <ul class="nav navbar-nav navbar-right">
                     {{-- <li><a href="{{route('register')}}">Daftar Akun</a></li> --}}
                     @auth
-                        <li><a href="">{{auth::user()->name}}</a></li>
-                        <li><a href="">Keluar</a></li>
+                        <li><a href="/home">{{auth::user()->name}}</a></li>
+                        <li>
+                            <a href="{{ route('logout') }}" onclick="event.preventDefault();
+                            document.getElementById('logout-form').submit();" class="dropdown-item notify-item">
+                            <i class="fas fa-sign-out-alt"></i>
+                            <span>Logout</span>
+                        </a>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                                @csrf
+                            </form>
+                        </li>
                     @else
                         <li><a href="{{route('login')}}"><b>Masuk</b></a></li>
                     @endauth

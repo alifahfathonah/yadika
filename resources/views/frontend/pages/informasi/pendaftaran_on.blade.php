@@ -46,7 +46,7 @@
             <div class="col-lg-6 col-xl-6 col-12" style="margin-top:5px">
                 <div class="form-group">
                     <label for="nama">Tanggal Lahir</label>
-                    <input type="date" class="form-control" name="tgl_lahir" placeholder="Enter Nama" required>
+                    <input type="date" class="form-control form-block" name="tgl_lahir" required>
                 </div>
             </div>
             <div class="col-lg-6 col-xl-6 col-12" style="margin-top:5px">

@@ -6,7 +6,7 @@
     <div class="col-lg-6 col-lg-6 col-md-6 col-sm-6 col-12">
         <div class="card-pages">
             <div class="body-card">
-                <h4 class="text-center" style="color:slateblue; font-weight:bold">TAK KENAL MAKA TAK SAYANG, YUK KITA KENALAN </h4>
+                <h4 class="text-center" style="color:black; font-weight:bold"><u>TAK KENAL MAKA TAK SAYANG, YUK KITA KENALAN</u></h4>
                 @if ($cek == !null)
                     @foreach ($about as $item)
                         {!!$item->isi!!}
