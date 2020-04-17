@@ -1,4 +1,5 @@
 @extends('layouts.backend')
+@section('title','Informasi Sekolah')
 @section('content')
 
 <div class="col-12 mt-3">
@@ -22,7 +23,7 @@
                             <td>{{$no}}</td>
                             <td>{!!$item->isi!!}</td>
                             <td>
-                                <a href="" class="btn btn-warning btn-sm">Edit</a>
+                                <a href="{{url('front-edit', $item->id)}}" class="btn btn-warning btn-sm">Edit</a>
                             </td>
                         </tr>
                     <?php
@@ -41,8 +42,8 @@
             <h4 class="header-title mt-0 mb-1">Informasi Sekolah</h4>
         <form action="{{url('front-store')}}" method="POST">
             @csrf
-            <textarea name="isi" id="summernote-editor" class="form-control" minlength="4">Tulis Disini... </textarea>
-            <input type="hidden" name="kat" value="info">
+            <textarea name="isi" class="form-control" minlength="4" rows="5" placeholder="Tulis Disini... "></textarea>
+            <input type="hidden" name="kat" value="info"> <br>
             <button type="submit" class="btn btn-primary btn-sm">Simpan</button>
             <button type="reset" class="btn btn-warning btn-sm">Reset</button>
         </form>

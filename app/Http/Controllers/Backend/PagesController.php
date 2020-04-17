@@ -19,6 +19,8 @@ class PagesController extends Controller
                 $isi = page::where('pages','tkj')->get();
                 return view('backend.pages.jurusan.tkj', compact('cek','isi'));
             }
+        } else {
+            return redirect('home');
         }
     }
 
@@ -32,6 +34,8 @@ class PagesController extends Controller
                 $isi = page::where('pages','tkr')->get();
                 return view('backend.pages.jurusan.tkr', compact('cek','isi'));
             }
+        } else {
+            return redirect('home');
         }
     }
 
@@ -45,6 +49,8 @@ class PagesController extends Controller
                 $isi = page::where('pages','ap')->get();
                 return view('backend.pages.jurusan.ap', compact('cek','isi'));
             }
+        } else {
+            return redirect('home');
         }
     }
 
@@ -58,6 +64,8 @@ class PagesController extends Controller
                 $isi = page::where('pages','ak')->get();
                 return view('backend.pages.jurusan.ak', compact('cek','isi'));
             }
+        } else {
+            return redirect('home');
         }
     }
 
@@ -71,6 +79,8 @@ class PagesController extends Controller
                 $isi = page::where('pages','ro')->get();
                 return view('backend.pages.informasi.regis_online', compact('cek','isi'));
             }
+        } else {
+            return redirect('home');
         }
     }
 
@@ -84,6 +94,8 @@ class PagesController extends Controller
                 $isi = page::where('pages','history')->get();
                 return view('backend.pages.about.history', compact('cek','isi'));
             }
+        } else {
+            return redirect('home');
         }
     }
 
@@ -97,6 +109,8 @@ class PagesController extends Controller
                 $isi = page::where('pages','head')->get();
                 return view('backend.pages.about.head', compact('cek','isi'));
             }
+        } else {
+            return redirect('home');
         }
     }
 
@@ -110,6 +124,8 @@ class PagesController extends Controller
                 $isi = page::where('pages','visi_misi')->get();
                 return view('backend.pages.about.visi_misi', compact('cek','isi'));
             }
+        } else {
+            return redirect('home');
         }
     }
 
@@ -124,6 +140,55 @@ class PagesController extends Controller
                 ]);
 
                 return redirect()->back();
+            }
+        } else {
+            return redirect('home');
+        }
+    }
+
+    // Edit Pages
+    public function page_edit($id)
+    {
+        if (auth::check()) {
+            if (auth::user()->auth == 1) {
+                $edit = page::findOrFail($id);
+                return view('backend.pages.jurusan.edit', compact('edit'));
+            }
+        } else {
+            return redirect('home');
+        }
+    }
+
+    // Update Pages
+    public function page_update(Request $request, $id)
+    {
+        if (auth::check()) {
+            if (auth::user()->auth == 1) {
+                $update = page::findOrFail($id);
+                $update->id = $request->id;
+                $update->isi = $request->isi;
+                $update->pages = $request->pages;
+                $update->save();
+    
+                if ($update->pages == 'tkj') {
+                    return redirect('pages-tkj');
+                } elseif ($update->pages == 'tkr') {
+                    return redirect('pages-tkr');
+                } elseif ($update->pages == 'ap') {
+                    return redirect('pages-ap');
+                } elseif ($update->pages == 'ak') {
+                    return redirect('pages-ak');
+                } elseif ($update->pages == 'ro') {
+                    return redirect('pages-ro');
+                } elseif ($update->pages == 'history') {
+                    return redirect('pages-history');
+                } elseif ($update->pages == 'head') {
+                    return redirect('pages-kepala-sekolah');
+                } elseif ($update->pages == 'visi_misi') {
+                    return redirect('pages-visi-dan-misi');
+                }
+            } else {
+                return redirect('home');
             }
         }
     }

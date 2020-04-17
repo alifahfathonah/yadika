@@ -1,11 +1,13 @@
 @extends('layouts.backend')
+@section('title','Pages Teknik Otomotif')
 @section('content')
-
 @if ($cek == !null)
 <div class="col-12 mt-3">
     <div class="card">
         <div class="card-body">
-            <h4 class="header-title mt-0 mb-1">Pages Teknik Otomotif</h4>
+            <h4 class="header-title mt-0 mb-1">Pages Teknik Otomotif
+                <a href="{{url('pages-edit', $cek->id)}}" class="btn btn-primary btn-sm">Edit</a>
+            </h4>
             <table class="table table-responsive">
                 <thead>
                     <tr>

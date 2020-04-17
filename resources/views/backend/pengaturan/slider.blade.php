@@ -1,4 +1,5 @@
 @extends('layouts.backend')
+@section('title','Pengaturan Slider')
 @section('content')
 <div class="row">
     <div class="col-12 mt-3">

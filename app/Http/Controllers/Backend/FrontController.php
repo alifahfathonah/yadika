@@ -58,4 +58,39 @@ class FrontController extends Controller
             }
         }
     }
+
+    // Edit
+    public function edit_front($id)
+    {
+        if (auth::check()) {
+            if (auth::user()->auth == 1) {
+                $edit = front::findOrFail($id);
+                return view('backend.front.edit', compact('edit'));
+            }
+        }
+    }
+
+    // Update
+    public function update_front(Request $request, $id)
+    {
+        if (auth::check()) {
+            if (auth::user()->auth == 1) {
+                $update = front::findOrFail($id);
+                $update->isi = $request->isi;
+                $update->kat = $request->kat;
+                $update->info = $request->info;
+                $update->save();
+                
+                if ($update->kat == 'info') {
+                    return redirect('front-info');
+                } elseif($update->kat == 'mading') {
+                    return redirect('front-mading');
+                } elseif($update->kat == 'about') {
+                    return redirect('front-about');
+                }
+                
+                return view('backend.front.edit', compact('edit'));
+            }
+        }
+    }
 }

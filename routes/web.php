@@ -54,6 +54,9 @@ Route::get('/home', 'HomeController@index')->name('home');
         Route::get('pages-tkr','Backend\PagesController@tkr');
         Route::get('pages-ap','Backend\PagesController@ap');
         Route::get('pages-ak','Backend\PagesController@ak');
+        
+        Route::get('pages-edit/{id}','Backend\PagesController@page_edit');
+        Route::put('pages-update/{id}','Backend\PagesController@page_update');
 
         // Informasi
         Route::get('pages-ro','Backend\PagesController@ro');
@@ -72,6 +75,8 @@ Route::get('/home', 'HomeController@index')->name('home');
         Route::get('front-mading','Backend\FrontController@mading');
         Route::get('front-about','Backend\FrontController@about');
         Route::post('front-store','Backend\FrontController@proses_front');
+        Route::get('front-edit/{id}','Backend\FrontController@edit_front');
+        Route::put('front-update/{id}','Backend\FrontController@update_front');
 
     // Notification
         Route::get('murid-baru-notification','Backend\CalonMuridController@notif');

@@ -1,4 +1,5 @@
 @extends('layouts.backend')
+@section('title','Mading Sekolah')
 @section('content')
 
 <div class="col-12 mt-3">
@@ -24,7 +25,7 @@
                             <td>{!!$item->isi!!}</td>
                             <td>{{$item->info}}</td>
                             <td>
-                                <a href="" class="btn btn-warning btn-sm">Edit</a>
+                                <a href="{{url('front-edit', $item->id)}}" class="btn btn-warning btn-sm">Edit</a>
                             </td>
                         </tr>
                     <?php
