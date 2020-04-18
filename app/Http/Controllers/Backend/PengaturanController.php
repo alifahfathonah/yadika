@@ -33,10 +33,11 @@ class PengaturanController extends Controller
                 $gambar->move($tujuan_upload,$gambar_slider);
 
                 $slider = slider::create([
-                    'title' => $request->title,
+                    'title'     => $request->title,
                     'sub_title' => $request->sub_title,
-                    'status' => $request->status,
-                    'gambar' => $gambar_slider,
+                    'status'    => 'Aktif',
+                    'kat'       => $request->kat,
+                    'gambar'    => $gambar_slider,
                 ]);
 
                 return redirect()->back();

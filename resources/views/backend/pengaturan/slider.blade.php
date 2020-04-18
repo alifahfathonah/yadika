@@ -13,7 +13,7 @@
                             <th>Title Gambar</th>
                             <th>Sub Title Gambar</th>
                             <th>Satatus</th>
-                            <th>Gambar</th>
+                            <th>Kategori</th>
                             <th width="110px">Action</th>
                         </tr>
                     </thead>
@@ -28,7 +28,7 @@
                                <td>{{$item->title}}</td>
                                <td>{{$item->sub_title}}</td>
                                <td>{{$item->status}}</td>
-                               <td><a href="" class="btn btn-info btn-sm">Lihat</a></td>
+                               <td>{{$item->kat}}</td>
                                <td>
                                    <a href="" class="btn btn-warning btn-sm">Edit</a>
                                    <a href="" class="btn btn-danger btn-sm">Hapus</a>
@@ -68,11 +68,14 @@
                     <div class="row">
                         <div class="col-lg-6 col-xl-6 col-12">
                             <div class="form-group">
-                                <label for="Status">Status</label>
-                                <select name="status" class="form-control" required>
+                                <label for="kat">Kategori</label>
+                                <select name="kat" class="form-control" required>
                                     <option value="">-- Pilih --</option>
-                                    <option value="Aktif">Aktif</option>
-                                    <option value="Tidak Aktif">Tidak Aktif</option>
+                                    <option value="tkj">Teknik Komputer & Jaringan</option>
+                                    <option value="tkr">Teknik Kendaraan Ringan</option>
+                                    <option value="ap">Akuntansi Perkantoran</option>
+                                    <option value="ak">Akuntansi</option>
+                                    <option value="front">Frontend</option>
                                 </select>
                             </div>
                         </div>

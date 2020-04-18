@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\page;
 use App\Models\artikel;
+use App\Models\slider;
 
 class PagesController extends Controller
 {
@@ -15,8 +16,10 @@ class PagesController extends Controller
         $cek = page::Where('pages','tkj')->first();
         $isi = page::Where('pages','tkj')->get();
         $artikel = artikel::limit(4)->orderBy('id','desc')->get();
+        $slider = slider::Where('status','Aktif')->where('kat','tkj')->get();
+        $sliders = slider::Where('status','Aktif')->where('kat','tkj')->first();
 
-        return view('frontend.pages.jurusan.tkj', compact('isi','cek','artikel'));
+        return view('frontend.pages.jurusan.tkj', compact('isi','cek','artikel','slider','sliders'));
     }
 
     // TKR
@@ -25,8 +28,10 @@ class PagesController extends Controller
         $cek = page::Where('pages','tkr')->first();
         $isi = page::Where('pages','tkr')->get();
         $artikel = artikel::limit(4)->orderBy('id','desc')->get();
+        $slider = slider::Where('status','Aktif')->where('kat','tkr')->get();
+        $sliders = slider::Where('status','Aktif')->where('kat','tkr')->first();
 
-        return view('frontend.pages.jurusan.tkr', compact('isi','cek','artikel'));
+        return view('frontend.pages.jurusan.tkr', compact('isi','cek','artikel','slider','sliders'));
     }
 
     // AP
@@ -35,8 +40,10 @@ class PagesController extends Controller
         $cek = page::Where('pages','ap')->first();
         $isi = page::Where('pages','ap')->get();
         $artikel = artikel::limit(4)->orderBy('id','desc')->get();
+        $slider = slider::Where('status','Aktif')->where('kat','ap')->get();
+        $sliders = slider::Where('status','Aktif')->where('kat','ap')->first();
 
-        return view('frontend.pages.jurusan.ap', compact('isi','cek','artikel'));
+        return view('frontend.pages.jurusan.ap', compact('isi','cek','artikel','slider','sliders'));
     }
 
     // AK
@@ -45,8 +52,10 @@ class PagesController extends Controller
         $cek = page::Where('pages','ak')->first();
         $isi = page::Where('pages','ak')->get();
         $artikel = artikel::limit(4)->orderBy('id','desc')->get();
+        $slider = slider::Where('status','Aktif')->where('kat','ak')->get();
+        $sliders = slider::Where('status','Aktif')->where('kat','ak')->first();
 
-        return view('frontend.pages.jurusan.ak', compact('isi','cek','artikel'));
+        return view('frontend.pages.jurusan.ak', compact('isi','cek','artikel','slider','sliders'));
     }
 
     // Sejarah Yadika

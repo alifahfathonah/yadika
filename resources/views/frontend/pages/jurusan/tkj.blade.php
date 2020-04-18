@@ -10,26 +10,18 @@
                 <div id="tkj" class="carousel slide" data-ride="carousel">
                     <!-- Indicators -->
                     <ol class="carousel-indicators">
-                    <li data-target="#tkj" data-slide-to="0" class="active"></li>
-                    <li data-target="#tkj" data-slide-to="1"></li>
-                    <li data-target="#tkj" data-slide-to="2"></li>
+                        @foreach ($slider as $item)
+                            <li data-target="#tkj" data-slide-to="{{$item->gambar}}" class="{{ $sliders->first ? 'active' : '' }}"></li>
+                        @endforeach
                     </ol>
                 
                     <!-- Wrapper for slides -->
                     <div class="carousel-inner">
-                
-                        <div class="item active">
-                            <img src="https://cdn.pixabay.com/photo/2016/03/09/09/17/computer-1245714_960_720.jpg" alt="Los Angeles" style="width:100%;">
-                        </div>
-                    
-                        <div class="item">
-                            <img src="https://cdn.pixabay.com/photo/2016/02/19/11/19/computer-1209641_960_720.jpg" alt="Chicago" style="width:100%;">
-                        </div>
-                        
-                        <div class="item">
-                            <img src="https://cdn.pixabay.com/photo/2015/04/20/13/17/work-731198_960_720.jpg" alt="New York" style="width:100%;">
-                        </div>
-                
+                        @foreach ($slider as $item)
+                            <div class="item {{ $loop->first ? 'active' : '' }}">
+                                <img src="{{asset('frontend/slider/'. $item->gambar)}}">
+                            </div>
+                        @endforeach
                     </div>
                 
                     <!-- Left and right controls -->

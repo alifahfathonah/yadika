@@ -19,6 +19,7 @@ class CreateSlidersTable extends Migration
             $table->string('sub_title');
             $table->string('status');
             $table->string('gambar');
+            $table->string('kat');
             $table->timestamps();
         });
     }
