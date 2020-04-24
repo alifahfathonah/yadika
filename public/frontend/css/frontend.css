@@ -160,6 +160,12 @@
     .isi {
         font-size: 10px;
     }
+
+    .status-text {
+      padding-top: 10px;
+      font-size: 15px;
+      font-weight: bold;
+    }
   }
 
   .img-berita {
@@ -180,4 +186,13 @@
     max-height:400px;
     background-color: white;
   }
+
+  .status-non-aktif{
+    box-shadow: 0 5px 5px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    border-radius: 5px;
+    background-color: white;
+
+  }
+
+  
 

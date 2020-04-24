@@ -51,6 +51,8 @@ Route::get('/home', 'HomeController@index')->name('home');
     // Pengaturan
     Route::get('pengaturan-slider','Backend\PengaturanController@slider');
     Route::post('pengaturan-slider','Backend\PengaturanController@prosesSlider');
+    Route::get('pengaturan-status','Backend\PengaturanController@status');
+    Route::post('pengaturan-status','Backend\PengaturanController@status_proses');
 
     // Pages
         // Jurusan

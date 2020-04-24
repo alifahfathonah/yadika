@@ -1,5 +1,6 @@
 @extends('layouts.frontend')
 @section('content')
+@if ($cek_status->status == 1)
     <div class="panel panel-forum">
         <div class="row">
             <div class="col-lg-6">
@@ -159,6 +160,18 @@
             </div>
         </form>
     </div>
+@else
+    <div class="card status-non-aktif">
+        <div class="card-body">
+            <div class="text-center">
+                <h1 class="status-text">MOHON MAAF, PENDAFTARAN BELUM DIBUKA</h1>
+                <p>Biasanya pembukaan pendaftaran online setiap bulan Juni, silahkan kembali lagi. <br>
+                Untuk info lebih lanjut kamu bisa menghubungi bagian informasi SMK YADIKA NATAR.</p>
+                <small>Terima Kasih :)</small>
+            </div>
+        </div>
+    </div>
+@endif
 @endsection
 @section('footer')
     @include('frontend.partials.footer')

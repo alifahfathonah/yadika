@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\slider;
+use App\Models\status;
 use Auth;
 
 class PengaturanController extends Controller
@@ -41,6 +42,32 @@ class PengaturanController extends Controller
                 ]);
 
                 return redirect()->back();
+            }
+        }
+    }
+
+    // Status Pages / URL
+    public function status()
+    {
+        if (auth::check()) {
+            if (auth::user()->auth == 1) {
+                $status = status::all();
+                return view('backend.pengaturan.status', compact('status'));
+            }
+        }
+    }
+
+    // Proses Status Pages / URL
+    public function status_proses(Request $request)
+    {
+        if (auth::check()) {
+            if (auth::user()->auth == 1) {
+                status::create([
+                    'nama'      => $request->nama,
+                    'status'    => $request->status
+                ]);
+
+                return back();
             }
         }
     }

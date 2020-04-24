@@ -334,6 +334,9 @@
                                     <li>
                                         <a href="{{url('pengaturan-slider')}}">Slider</a>
                                     </li>
+                                    <li>
+                                        <a href="{{url('pengaturan-status')}}">Status</a>
+                                    </li>
                                 </ul>
                             </li>
                         </ul>
