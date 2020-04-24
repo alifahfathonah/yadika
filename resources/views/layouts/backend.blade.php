@@ -396,13 +396,25 @@
 
         <!-- App js -->
         <script src="{{asset('backend/js/app.min.js')}}"></script>
-        <script src="{{asset('backend/js/pages/form-editor.init.js')}}"></script>  
+        {{-- <script src="{{asset('backend/js/pages/form-editor.init.js')}}"></script>   --}}
         
         <!--Summernote js-->
         <script src="{{asset('backend/libs/summernote/summernote-bs4.min.js')}}"></script>
 
         <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.20/datatables.min.js"></script>
 
+        <script src="//cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
+        <script>
+        var options = {
+            filebrowserImageBrowseUrl: '/laravel-filemanager?type=Images',
+            filebrowserImageUploadUrl: '/laravel-filemanager/upload?type=Images&_token=',
+            filebrowserBrowseUrl: '/laravel-filemanager?type=Files',
+            filebrowserUploadUrl: '/laravel-filemanager/upload?type=Files&_token='
+        };
+        </script>
+        <script>
+            CKEDITOR.replace('my-editor', options);
+        </script>
         <script type="text/javascript">
             $('#myTable').DataTable( {
                 responsive: {

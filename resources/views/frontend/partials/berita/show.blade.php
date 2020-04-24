@@ -8,7 +8,6 @@
                     <span style="padding-left:15px">
                       Posted By <b>Andri</b> | <b>Berita</b> | {{Carbon\carbon::parse($show->created_at)->format('d-m-Y')}}
                     </span>
-                    <img src="{{asset('thumbail/'. $show->thumbail)}}" class="img-berita">
                     <p class="isi-berita"> {!! $show->isi !!}</p>
                     <span style="padding-left:15px">
                         Share 

@@ -13,8 +13,8 @@
                 <h4 class="card-header mt-0 mb-1 rounded font-weight-bold">Artikel Post</h4>
             <form action="{{route('artikel.store')}}" method="POST" enctype="multipart/form-data">
                 @csrf
-                <input type="text" name="title" class="form-control mt-2 mb-2" placeholder="Judul Artikel" required>
-                <textarea name="isi" id="summernote-editor" class="form-control" minlength="4" required> </textarea>
+                <input type="text" name="title" class="form-control mt-2 mb-2" placeholder="Judul Artikel" autocomplete="off" required>
+                <textarea name="isi" id="my-editor" class="form-control" minlength="4" required> </textarea>
             </div>
         </div>
     </div>
@@ -24,9 +24,9 @@
             <div class="card-body rounded">
                <div class="form-group">
                    <label>Kategori</label>
-                   <select name="" class="form-control">
-                       <option value="">Pilih</option>
-                       <option value="">Berita</option>
+                   <select name="kategori" class="form-control">
+                       <option value="Sekolah">Pilih</option>
+                       <option value="Umum">Berita</option>
                    </select>
                </div>
                <div class="form-group">
@@ -34,11 +34,15 @@
                     <input type="file" name="thumbail" class="form-control">
                 </div>
                 <div class="form-group">
+                    <label>Isi Preview</label>
+                    <textarea name="isi_preview" rows="2" class="form-control" placeholder="Max 13 kata"></textarea>
+                </div>
+                <div class="form-group">
                     <label>Status</label>
-                    <select name="" class="form-control">
+                    <select name="status" class="form-control">
                         <option value="">Pilih</option>
-                        <option value="">Terbitkan</option>
-                        <option value="">Draft</option>
+                        <option value="Terbitkan">Terbitkan</option>
+                        <option value="Draft">Draft</option>
                     </select>
                 </div>
                 <div class="form-group text-center">

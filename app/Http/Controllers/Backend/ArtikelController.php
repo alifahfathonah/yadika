@@ -44,8 +44,11 @@ class ArtikelController extends Controller
         $artikel->user_id = auth::user()->id;
         $artikel->title = $request->title;
         $artikel->isi = $request->isi;
+        $artikel->isi_preview = $request->isi_preview;
         $artikel->slug = $slug;
         $artikel->thumbail = $nama_foto;
+        $artikel->kategori = $request->kategori;
+        $artikel->status = $request->status;
         $artikel->save();
 
         return redirect()->route('artikel.index');

@@ -6,7 +6,9 @@
         <div class="card auth-card bg-transparent shadow-none rounded-0 mb-0 w-100">
             <div class="card-content">
                 <div class="card-body text-center">
-                    <img src="{{asset('backend/images/pages/404.png')}}" class="img-fluid align-self-center" alt="branding logo">
+                    <img src="{{asset('backend/images/pages/404.png')}}" class="img-fluid align-self-center" alt="branding logo" style="background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: center; height:400px">
                     <h1 class="font-large-2 my-1">404 - Page Not Found!</h1>
                     <p class="p-2">
                         Sepertinya halaman yang kamu cari tidak bisa kami jangkau.

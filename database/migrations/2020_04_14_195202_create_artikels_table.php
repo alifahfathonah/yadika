@@ -18,7 +18,10 @@ class CreateArtikelsTable extends Migration
             $table->string('title');
             $table->string('slug');
             $table->text('isi');
+            $table->text('isi_preview');
             $table->string('thumbail');
+            $table->string('kategori');
+            $table->string('status');
             $table->UnsignedBigInteger('user_id');
             $table->timestamps();
 

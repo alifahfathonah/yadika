@@ -15,9 +15,9 @@
 	<link href="{{asset('frontend/plugins/bootstrap3/css/bootstrap.min.css')}}" rel="stylesheet" />
 	<link href="{{asset('frontend/plugins/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet" />
 	<link href="{{asset('frontend/plugins/animate/animate.min.css')}}" rel="stylesheet" />
-	<link href="{{asset('frontend/css/forum/style.css')}}" rel="stylesheet" />
-	<link href="{{asset('frontend/css/forum/style-responsive.min.css')}}" rel="stylesheet" />
-	<link href="{{asset('frontend/css/forum/theme/default.css')}}" id="theme" rel="stylesheet" />
+	<link href="{{asset('frontend/css/front/style.css')}}" rel="stylesheet" />
+	<link href="{{asset('frontend/css/front/style-responsive.min.css')}}" rel="stylesheet" />
+	<link href="{{asset('frontend/css/front/theme/default.css')}}" id="theme" rel="stylesheet" />
 	<!-- ================== END BASE CSS STYLE ================== -->
 	<link href="{{asset('backend/css/icons.min.css')}}" rel="stylesheet" type="text/css" />
 	<!-- ================== BEGIN BASE JS ================== -->
@@ -146,7 +146,7 @@
 	<script src="{{asset('frontend/plugins/jquery/jquery-3.2.1.min.js')}}"></script>
 	<script src="{{asset('frontend/plugins/bootstrap3/js/bootstrap.min.js')}}"></script>
 	<script src="{{asset('frontend/plugins/js-cookie/js.cookie.js')}}"></script>
-	<script src="{{asset('frontend/js/forum/apps.min.js')}}"></script>
+	<script src="{{asset('frontend/js/front/apps.min.js')}}"></script>
 	<!-- ================== END BASE JS ================== -->
 	
 	<script>    
